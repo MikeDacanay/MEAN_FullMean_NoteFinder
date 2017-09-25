@@ -1,0 +1,11 @@
+<br><br>
+<!-- {{ player | json}} -->
+<form (submit)="onSubmit()">
+	<p>Name</p>
+	<input 
+	type='text'
+	name='user'	
+	[(ngModel)]='player.user'>
+	<input type='submit' value='PLAY!'>
+</form>
+<p> Click the button to play</p>

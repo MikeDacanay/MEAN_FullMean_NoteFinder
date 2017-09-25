@@ -1,0 +1,29 @@
+<p> Trivia Works</p>
+<!-- {{playQuestions | json}} -->
+<h5> Hi {{answer.user}}</h5>
+<div>
+	<form (submit)='onSubmit()'>	
+		<p>1. {{playQuestions[0].question}}</p>
+		<p> A. {{playQuestions[0].correct}}</p>
+		<p> B. {{playQuestions[0].fake1}}</p>
+		<p> C. {{playQuestions[0].fake2}}</p><br>
+
+		<p>2. {{playQuestions[1].question}}</p>
+		<p> A. {{playQuestions[1].correct}}</p>
+		<p> B. {{playQuestions[1].fake1}}</p>
+		<p> C. {{playQuestions[1].fake2}}</p><br>
+
+		<p>3. {{playQuestions[2].question}}</p>
+		<p> A. {{playQuestions[2].correct}}</p>
+		<p> B. {{playQuestions[2].fake1}}</p>
+		<p> C. {{playQuestions[2].fake2}}</p><br>
+
+		<input
+		type='text'
+		name='attempt'
+		[(ngModel)]='answer.attempt'>
+		(answer in commas, ex. A,B,C)
+		<input type='submit'>
+	</form>
+</div>
+
