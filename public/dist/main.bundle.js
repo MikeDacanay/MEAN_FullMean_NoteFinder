@@ -80,7 +80,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a [routerLink]=\"['']\">Home</a>|\n<a [routerLink]=\"['new_question']\">Add Question</a>\n<router-outlet></router-outlet>"
+module.exports = "<a [routerLink]=\"['']\">Home</a>|\r\n<a [routerLink]=\"['new_question']\">Add Question</a>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -280,7 +280,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<br><br>\n<!-- {{ listPlayers | json}} -->\n<form (submit)=\"onSubmit()\">\n\t<p style=\"display: inline-block;\">Name:</p>\n\t<input \n\ttype='text'\n\tname='user'\t\n\t[(ngModel)]='player.user'>\n\t<input type='submit' value='PLAY!'>\n</form>\n<p> Click the button to play</p>\n\n<div *ngFor='let player of listPlayers; let i = index'>\n\t<h2 style='display: inline-block;'>Player {{i+1}}:</h2> {{player.user}} <h2 style='display: inline-block;'> Result: </h2>{{player.result}}  \n</div>\n"
+module.exports = "<br><br>\r\n<!-- {{ listPlayers | json}} -->\r\n<form (submit)=\"onSubmit()\">\r\n\t<p style=\"display: inline-block;\">Name:</p>\r\n\t<input \r\n\ttype='text'\r\n\tname='user'\t\r\n\t[(ngModel)]='player.user'>\r\n\t<input type='submit' value='PLAY!'>\r\n</form>\r\n<p> Click the button to play</p>\r\n\r\n<div *ngFor='let player of listPlayers; let i = index'>\r\n\t<h2 style='display: inline-block;'>Player {{i+1}}:</h2> {{player.user}} <h2 style='display: inline-block;'> Result: </h2>{{player.result}}  \r\n</div>\r\n"
 
 /***/ }),
 
@@ -431,7 +431,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/trivia/trivia.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <p> Trivia Works</p> -->\n<!-- {{playQuestions | json}} -->\n<!-- {{playQuestionsfilter | json}} -->\n<h5> Hi {{answer.user}}</h5>\n<div>\n\t<form (submit)='onSubmit()'>\t\n\t\t<p>1. {{playQuestions[0].question}}</p>\n\t\t<p> A. {{playQuestions[0].correct}}</p>\n\t\t<p> B. {{playQuestions[0].fake1}}</p>\n\t\t<p> C. {{playQuestions[0].fake2}}</p><br>\n\n\t\t<p>2. {{playQuestions[1].question}}</p>\n\t\t<p> A. {{playQuestions[1].correct}}</p>\n\t\t<p> B. {{playQuestions[1].fake1}}</p>\n\t\t<p> C. {{playQuestions[1].fake2}}</p><br>\n\n\t\t<p>3. {{playQuestions[2].question}}</p>\n\t\t<p> A. {{playQuestions[2].correct}}</p>\n\t\t<p> B. {{playQuestions[2].fake1}}</p>\n\t\t<p> C. {{playQuestions[2].fake2}}</p><br>\n\n\t\t<input\n\t\ttype='text'\n\t\tname='attempt'\n\t\t[(ngModel)]='answer.attempt'>\n\t\t(answer in commas, ex. A,B,C)\n\t\t<input type='submit'>\n\t</form>\n</div>\n\n"
+module.exports = "<!-- <p> Trivia Works</p> -->\r\n<!-- {{playQuestions | json}} -->\r\n<!-- {{playQuestionsfilter | json}} -->\r\n<h5> Hi {{answer.user}}</h5>\r\n<div>\r\n\t<form (submit)='onSubmit()'>\t\r\n\t\t<p>1. {{playQuestions[0].question}}</p>\r\n\t\t<p> A. {{playQuestions[0].correct}}</p>\r\n\t\t<p> B. {{playQuestions[0].fake1}}</p>\r\n\t\t<p> C. {{playQuestions[0].fake2}}</p><br>\r\n\r\n\t\t<p>2. {{playQuestions[1].question}}</p>\r\n\t\t<p> A. {{playQuestions[1].correct}}</p>\r\n\t\t<p> B. {{playQuestions[1].fake1}}</p>\r\n\t\t<p> C. {{playQuestions[1].fake2}}</p><br>\r\n\r\n\t\t<p>3. {{playQuestions[2].question}}</p>\r\n\t\t<p> A. {{playQuestions[2].correct}}</p>\r\n\t\t<p> B. {{playQuestions[2].fake1}}</p>\r\n\t\t<p> C. {{playQuestions[2].fake2}}</p><br>\r\n\r\n\t\t<input\r\n\t\ttype='text'\r\n\t\tname='attempt'\r\n\t\t[(ngModel)]='answer.attempt'>\r\n\t\t(answer in commas, ex. A,B,C)\r\n\t\t<input type='submit'>\r\n\t</form>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
