@@ -1,7 +1,7 @@
 <br><br>
-<!-- {{ player | json}} -->
+<!-- {{ listPlayers | json}} -->
 <form (submit)="onSubmit()">
-	<p>Name</p>
+	<p style="display: inline-block;">Name:</p>
 	<input 
 	type='text'
 	name='user'	
@@ -9,3 +9,7 @@
 	<input type='submit' value='PLAY!'>
 </form>
 <p> Click the button to play</p>
+
+<div *ngFor='let player of listPlayers; let i = index'>
+	<h2 style='display: inline-block;'>Player {{i+1}}:</h2> {{player.user}} <h2 style='display: inline-block;'> Result: </h2>{{player.result}}  
+</div>

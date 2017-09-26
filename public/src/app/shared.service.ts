@@ -19,7 +19,21 @@ export class SharedService {
 	create(add){
 		this._http.post('/new_question', add)
 		.subscribe()
-		// this.questionList.push(add);
-		// console.log(this.questionList);
+	}
+
+	addContestant(contestant){
+		this._http.post('/contestant', contestant)
+		.subscribe()
+	}
+
+	retrieveTrivias(callback){
+		this._http.get('/trivias')
+		.subscribe(data=>{
+			// console.log(data);
+			this.questionList = data.json();
+			// console.log(this.questionList);
+			//implement a callback here to fix timing on home.comp
+			callback(this.questionList);
+		})
 	}
 }

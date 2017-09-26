@@ -19,19 +19,35 @@ let triviaSchema = new mongoose.Schema({
 	correct: {type: String},
 	fake1: {type: String},
 	fake2: {type: String},
-	name: {type: String},
+	user: {type: String},
 	result: {type: String},
+	attempt: {type: String}
 })
 mongoose.model("Trivia", triviaSchema); //defining
 let Trivia = mongoose.model('Trivia');
 
 // Routes
 
-app.post('/new_question', (req,res) =>{
-	console.log(req.body);
+app.post('/contestant', (req,res) =>{
+	// console.log(req.body);
 	Trivia.create(req.body, (err,trivia)=>{
 		if(err)return res.json(err)
 		else return res.json(trivia)
+	})
+})
+
+app.post('/new_question', (req,res) =>{
+	// console.log(req.body);
+	Trivia.create(req.body, (err,trivia)=>{
+		if(err)return res.json(err)
+		else return res.json(trivia)
+	})
+})
+
+
+app.get('/trivias', (req, res)=>{
+	Trivia.find({}, function(err, trivias){
+		return res.json(trivias);
 	})
 })
 	
